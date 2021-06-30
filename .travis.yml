@@ -6,6 +6,6 @@ before_install:
   - docker build -t murleedas/docker-react-proj -f Dockerfile.dev .
 
 script:
-  - docker run murleedas/docker-react-proj npm run test -- --coverage
+  - docker run -e CI=true murleedas/docker-react-proj npm run test -- --coverage
 
 
